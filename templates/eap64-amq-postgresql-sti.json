@@ -6,13 +6,13 @@
             "description": "Application template for EAP 6 PostgreSQL A-MQ applications built using S2I.",
             "iconClass": "icon-jboss",
             "tags": "eap,postgresql,javaee,java,database,jboss,xpaas,amq",
-            "version": "1.2.0"
+            "version": "1.1.0"
         },
         "name": "eap64-amq-postgresql-s2i"
     },
     "labels": {
         "template": "eap64-amq-postgresql-s2i",
-        "xpaas": "1.2.0"
+        "xpaas": "1.1.0"
     },
     "parameters": [
         {
@@ -381,7 +381,7 @@
                         "from": {
                             "kind": "ImageStreamTag",
                             "namespace": "${IMAGE_STREAM_NAMESPACE}",
-                            "name": "jboss-eap64-openshift:1.2"
+                            "name": "jboss-eap64-openshift:1.1"
                         }
                     }
                 },
@@ -445,7 +445,7 @@
                         "type": "ConfigChange"
                     }
                 ],
-                "replicas": 1,
+                "replicas": 2,
                 "selector": {
                     "deploymentConfig": "${APPLICATION_NAME}"
                 },
@@ -697,7 +697,7 @@
                             "from": {
                                 "kind": "ImageStreamTag",
                                 "namespace": "${IMAGE_STREAM_NAMESPACE}",
-                                "name": "jboss-amq-62:1.2"
+                                "name": "jboss-amq-62:1.1"
                             }
                         }
                     },
